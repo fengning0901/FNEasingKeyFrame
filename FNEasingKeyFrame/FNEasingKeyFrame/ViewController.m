@@ -31,7 +31,7 @@
     CGFloat w = sw * 0.9 / boxPerLine;
     for (int i = 1; i < 32; i++) {
         for (int n = 0; n < boxPerLine && i < 32; n ++ ) {
-            UIView* view = [[PathView alloc] initWithPoints:[FNEasingKeyFrame keyFramesForAnimationType:i withNumberOfKeyFrames:120]];
+            UIView* view = [[PathView alloc] initWithPoints:[FNEasingKeyFrame circleKeyFramesForAnimationType:i withNumberOfKeyFrames:120]];
             view.frame = CGRectMake(padding + (w + padding) * n, top + padding, w, w);
             UILabel* label = [UILabel new];
             label.text = [NSString stringWithFormat:@"%d",i];

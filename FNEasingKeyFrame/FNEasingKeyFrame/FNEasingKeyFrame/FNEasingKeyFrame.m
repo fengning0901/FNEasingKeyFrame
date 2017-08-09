@@ -10,6 +10,21 @@
 
 @implementation FNEasingKeyFrame
 
++ (NSArray<NSNumber*>*)circleKeyFramesForAnimationType:(FNEasingKeyFrameAnimationType)type withNumberOfKeyFrames:(NSInteger)number {
+    NSAssert(number > 0, @"Number Of key frames must be Greater than 0");
+    
+    NSMutableArray* mArray = [NSMutableArray array];
+    for (int i = 0; i < number; i++) {
+        if (i < number / 2) {
+            [mArray addObject:[NSNumber numberWithFloat:[FNEasingKeyFrame singleKeyFrameForAnimationType:type withProgressRate:(float)i / (float)(number / 2)]]];
+        }else{
+            [mArray addObject:[NSNumber numberWithFloat:[FNEasingKeyFrame singleKeyFrameForAnimationType:type withProgressRate:1.0 - ((float)i - ((float)number / 2.0)) / (float)(number / 2)]]];
+        }
+    }
+    
+    return mArray.copy;
+}
+
 + (NSArray<NSNumber*>*)keyFramesForAnimationType:(FNEasingKeyFrameAnimationType)type withNumberOfKeyFrames:(NSInteger)number {
     
     NSAssert(number > 0, @"Number Of key frames must be Greater than 0");

@@ -1,7 +1,7 @@
 # FNEasingKeyFrame
 
-        // 根据总帧数和动画曲线类型直接生成动画帧序列做循环动画
-        + (NSArray<NSNumber*>*)circleKeyFramesForAnimationType:(FNEasingKeyFrameAnimationType)type withNumberOfKeyFrames:(NSInteger)number;
+    // 根据总帧数和动画曲线类型直接生成动画帧序列做循环动画
+    + (NSArray<NSNumber*>*)circleKeyFramesForAnimationType:(FNEasingKeyFrameAnimationType)type withNumberOfKeyFrames:(NSInteger)number;
 
     // 根据总帧数和动画曲线类型直接生成动画帧序列
     + (NSArray<NSNumber*>*)keyFramesForAnimationType:(FNEasingKeyFrameAnimationType)type withNumberOfKeyFrames:(NSInteger)number;

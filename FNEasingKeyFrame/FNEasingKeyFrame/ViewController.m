@@ -26,7 +26,7 @@
     UIScrollView* scroll = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:scroll];
     CGFloat top = 20;
-    NSInteger boxPerLine = 4;
+    NSInteger boxPerLine = 2;
     CGFloat padding = sw * 0.1 / (boxPerLine + 1);
     CGFloat w = sw * 0.9 / boxPerLine;
     for (int i = 1; i < 32; i++) {
